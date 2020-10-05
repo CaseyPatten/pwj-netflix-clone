@@ -7,9 +7,6 @@ body {
 
 .original__movies {
 	overflow-x: scroll;
-	/* Hide scrollbar for IE, Edge and Firefox */
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
 	white-space: nowrap;
 	padding-left: 50px;
 }
@@ -27,6 +24,11 @@ body {
 	margin-right: 15px;
 	height: 250px;
 	width: auto;
+}
+
+.original__header,
+.movies__header h2 {
+	padding-left: 50px;
 }
 
 img {
@@ -103,7 +105,7 @@ img {
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 	z-index: 10;
 }
-.header {
+header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -116,17 +118,19 @@ img {
 	right: 0;
 }
 
-.logo img {
+/* > is used to target just the element directly after. Ex only 1 img if there was multiple*/
+.logo > img {
 	width: 120px;
 }
 
-.profile img {
+.profile > img {
 	width: 40px;
 }
 
 .movies__container img {
 	width: 200px;
 	margin-right: 10px;
+	margin-bottom: 5px;
 }
 .movies__container h2 {
 	margin-top: 15px;
